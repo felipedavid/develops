@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { listCountries } from "../../api/countries";
 import { useNavigate } from "react-router-dom";
 
 interface Country {

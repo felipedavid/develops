@@ -1,9 +1,10 @@
 import axios, { AxiosInstance } from 'axios';
 
 const axiosParams = {
-    baseURL: process.env.NODE_ENV === "development" ? "http://localhost:3000" : "/",
+    baseURL: import.meta.env.VITE_API_URL,
 }
 
+console.log(axiosParams.baseURL);
 const axiosInstance = axios.create(axiosParams);
 
 function api(axios: AxiosInstance) {
