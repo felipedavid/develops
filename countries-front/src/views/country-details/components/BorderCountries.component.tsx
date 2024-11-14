@@ -1,21 +1,26 @@
 import CountriesList from "../../components/CountriesList";
 
 interface BorderCountry {
-    commonName: string;
-    countryCode: string;
-    name: string;
+  commonName: string;
+  countryCode: string;
+  name: string;
 }
 
 interface BorderCountriesProps {
-    borderCountries: BorderCountry[];
+  borderCountries: BorderCountry[];
 }
 
-function BorderCountries({borderCountries}: BorderCountriesProps) {
-    return (
-        <div>
-            <CountriesList countries={borderCountries.map(country => ({ countryCode: country.countryCode, name: country.commonName  }))} />
-        </div>
-    )
+function BorderCountries({ borderCountries }: BorderCountriesProps) {
+  return (
+    <div>
+      <CountriesList
+        countries={borderCountries.map((country) => ({
+          countryCode: country.countryCode,
+          name: country.commonName,
+        }))}
+      />
+    </div>
+  );
 }
 
 export default BorderCountries;
